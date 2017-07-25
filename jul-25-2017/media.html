@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Images, audio and video</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .image-container {
+                width: 500px;
+            }
+            
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Media elements</h1>
+        <hr/>
+
+        <h2>Images</h2>
+        <div class="image-container">
+            <img src="images/grant-thornton-log.jpeg" alt="Grant Thornton logo" />
+        </div>
+
+        <!-- including audio and video are featurs of HTML5 -->
+        <h2>Audio</h2>
+        <audio controls autoplay loop>
+            <source src="media/auds/horse.mp3" type="audio/mp3" />
+            <source src="media/auds/horse.ogg" type="audio/ogg" />
+        </audio>
+
+        <h2>Video</h2>
+        <video controls>
+            <source src="media/vids/demo.mp4" type="video/mp4" />
+            <source src="media/vids/demo.webm" type="video/webm" />
+        </video>
+    </body>
+</html>
