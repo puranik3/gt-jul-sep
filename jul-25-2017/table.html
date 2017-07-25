@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            tbody tr:nth-child(even) { /* select those trs that are even children of their parent tbody */
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr> <!-- table row -->
+                    <th>S.No.</th>
+                    <th>Name</th> <!-- table heading cells -->
+                    <th>Email id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <!-- table row -->
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">John</td> <!-- table data cells -->
+                    <td>john@us.gt.com</td> <!-- table data cells -->
+                </tr>
+                <tr> <!-- table row -->
+                    <td>john-ceo@us.gt.com</td> <!-- table data cells -->
+                </tr>
+                <tr> <!-- table row -->
+                    <td>2</td>
+                    <td>Mary</td> <!-- table data cells -->
+                    <td>mary@us.gt.com</td> <!-- table data cells -->
+                </tr>
+                <tr> <!-- table row -->
+                    <td>3</td>
+                    <td>Ravi</td> <!-- table data cells -->
+                    <td>ravi@us.gt.com</td> <!-- table data cells -->
+                </tr>
+                <tr> <!-- table row -->
+                    <td>4</td>
+                    <td>Geeta</td> <!-- table data cells -->
+                    <td>geeta@us.gt.com</td> <!-- table data cells -->
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
