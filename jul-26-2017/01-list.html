@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lists in HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            ul {
+                list-style-type: square; /* square, circle, disc */
+                font-size: 30px;
+             }
+
+             li {
+                 line-height: 45px;
+             }
+
+             li span {
+                position: relative;
+                font-size: 14px;
+                top: -4px;
+             }
+
+             ol {
+                 list-style-type: lower-alpha; /* upper-alpha, lower-arabic, upper-arabic, lower-roman ... */
+             }
+
+             #primary-menu {
+                 list-style-type: none;
+                 padding: 0;
+             }
+
+             #primary-menu li {
+                 display: inline-block;
+                 width: 140px;
+             }
+        </style>
+    </head>
+    <body>
+        <h1>Lists</h1>
+        <hr/>
+
+        <h2>Unordered Lists</h2>
+        <h3>List of fruits</h3>
+        <ul> <!-- unordered list -->
+            <li><span>Apples</span></li> <!-- list item -->
+            <li><span>Oranges</span></li>
+            <li><span>Bananas</span></li>
+        </ul>
+
+        <h2>Ordered lists</h2>
+        <h3>List of holidays</h3>
+        <ol>
+            <li>New Years Day</li>
+            <li>Republic Day</li>
+            <li>Christmas</li>
+        </ol>
+
+        <ol id="primary-menu">
+            <li>
+                <a href="#">About us</a>
+            </li>
+            <li>
+                <a href="#">Our clients</a>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact us</a>
+            </li>
+        </ol>
+
+        <dl>
+            <dt>HTML</dt>
+            <dd>HTML</dd>
+        </dl>
+    </body>
+</html>
