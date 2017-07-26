@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            label {
+                display: inline-block;
+                width: 200px;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Forms</h1>
+        <hr/>
+        
+        <h2>Register with us</h2>
+        
+        <form action="02-forms-process.html" method="post" enctype="multipart/form-data">
+            <!--
+            <label>
+                First name
+                <input type="text" />
+            </label>
+            -->
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" value="John" />
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" />
+            </div>
+
+            <!-- HTML5 input type date -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" />
+            </div>
+
+            <div class="form-group"> <!-- auto validation (html5) -->
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" />
+            </div>
+            <!-- end of html5 types -->
+
+            <div class="form-group">
+                <label for="bio">Tell us about yourself</label>
+                <textarea id="bio" name="bio" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Your city</label>
+                <select id="city" name="city" multiple>
+                    <option value="">-- Select city --</option>
+                    <option value="NY">New York</option>
+                    <option value="MUM" selected>Mumbai</option>
+                    <option value="ND">New Delhi</option>
+                    <option value="BLR">Bangalore</option>
+                </select>
+            </div>
+
+            <!-- radio button is created using input type="radio" -->
+            <div class="form-group">
+                <label for="interests">What are you interested in?</label>
+                <span id="interests">
+                    <label>
+                        <input type="checkbox" id="music" name="interests" value="music" />
+                        Music
+                    </label>
+                    <label>
+                        <input type="checkbox" id="fitness" name="interests" value="fitness" />
+                        Fitness
+                    </label>
+                    <label>
+                        <input type="checkbox" id="movies" name="interests" value="movies" />
+                        Movies
+                    </label>
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="profile">Profile</label>
+                <input type="file" id="profile" name="profile" multiple />
+            </div>
+
+            <input type="submit" value="Register" />
+            <input type="reset" value="Reset the form" />
+        </form>
+    </body>
+</html>
