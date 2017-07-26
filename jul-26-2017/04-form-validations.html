@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form validations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action="02-forms-process.html"> <!-- we can set novalidate on the form to bypass validation -->
+            <!-- HTML5 inputs -->
+            <input list="cities" name="shipping-city" required />
+            <input list="cities" name="billing-city" />
+
+            <datalist id="cities">
+                <option value="NY">New York</option>
+                <option>New Delhi</option>
+                <option value="BLR">Bangalore</option>
+                <option>Belgaum</option>
+            </datalist>
+
+            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" formnovalidate formaction="02-forms-process-another.html" formmethod="post" />
+
+            <input type="tel" name="phone" id="phone" pattern="[7-9]\d{9}" />
+            <input type="number" name="quantity" min="1" max="10" step="2" />
+            <input type="url" name="home-page-url" disabled value="http://john-ceo@gt.us.com" /> <!-- you can also give readonly (goes out in form submission) - disabled values are not sent out in submission -->
+            Rate us: <input type="range" min="5" max="10" step="2" />
+            <input type="search" name="product-search-box" placeholder="Mobile phone" />
+
+            <input type="text" name="empid" maxlength="10" /> <!-- no standard minlength -->
+        </form>
+    </body>
+</html>
