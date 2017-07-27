@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Symbols and Character Entities</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Tutorial on HTML</h1>
+        <hr/>
+        Paragraphs are created using the &lt;p&gt; tag in HTML
+        <textarea id="some-free-flow-text"></textarea>
+
+        <button id="btn-done">Done</button>
+
+        <span id="user-input"></span>
+        <script>
+            document.getElementById( 'btn-done' ).onclick = function() {
+                var userInputText = document.getElementById( 'some-free-flow-text' ).value;
+                /* Code to replace <, > etc. goes in here */
+                document.getElementById( 'user-input' ).innerHTML = userInputText;
+            };
+        </script>
+    </body>
+</html>
