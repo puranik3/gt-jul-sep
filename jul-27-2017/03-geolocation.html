@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #map-container {
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map-container"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvaq9QcVhuz-TmWAj1LGW9fPnl3Zvia1U"></script>
+        <script>
+            console.log( google.maps );
+            if( navigator.geolocation ) {
+                console.log( 'Geolocation is supported' );
+                navigator.geolocation.getCurrentPosition( success, error );
+            } else {
+                console.log( 'Geolocation is not supported' );
+            }
+
+            function success( position ) {
+                console.log( position );
+                var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var map = new google.maps.Map(
+                    document.getElementById( 'map-container' ),
+                    {
+                        center: latlng,
+                        zoom: 17
+                    }
+                );
+            }
+
+            function error( err ) {
+
+            }
+        </script>
+
+    </body>
+</html>
