@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Semantic tags</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            aside {
+                float: right;
+                padding: 20px;
+                border: 1px solid black;
+                font-size: 3em;
+            }
+
+            article {
+                overflow: auto;
+            }
+
+            article > section {
+                float: left;
+            }
+
+            #main-section {
+                width: 50%;
+            }
+
+            #sub-section {
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <h1>Grant Thornton India</h1>
+            <nav> <!-- only for primary navigation of the site -->
+                <ul id="primary-meny">
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="main-content">
+            <section id="main-section">
+                <h2>About Grant Thornton India LLP</h2>
+
+                <figure>
+                    <img src="images/grant-thornton-logo.jpeg" alt="Grant Thornton logo" />
+                    <figcaption>Grant Thornton logo as of 2017</figcaption>
+                </figure>
+
+                Grant Thornton in India is one of the largest assurance, tax, and advisory firms in India. With over 3,000 professional staff across 13 offices, the firm provides robust compliance services and growth navigation solutions on complex business and financial matters through focused practice groups. The firm has extensive experience across a range of industries, market segments, and geographical corridors. It is on a fast-track to becoming the best growth advisor to dynamic Indian businesses with global ambitions. With shorter decision-making chains, more senior personnel involvement, and empowered client service teams, the firm is able to operate in a coordinated way and respond with agility. Over the years, Grant Thornton in India has developed a host of specialist services such as Corporate Finance, Governance, Risk & Operations, and Forensic & Investigation. The firm’s strong Subject Matter Expertise (SME) focus not only enhances the reach but also helps deliver bespoke solutions tailored to the needs of its clients.
+
+                <aside>
+                    Grant Thornton was created in 1924
+                </aside>
+
+            </section>
+
+ 
+            <section id="sub-section">
+                <h2>About Grant Thornton International Ltd</h2>
+
+                Grant Thornton is one of the world’s leading organisations of independent assurance, tax and advisory firms. These firms help dynamic organisations unlock their potential for growth by providing meaningful, forward-looking advice. Proactive teams, led by approachable partners, use insights, experience and instinct to understand complex issues for privately owned, publicly listed and public sector clients and help them to find solutions. More than 47,000 Grant Thornton people across over 130 countries, are focused on making a difference to the clients, colleagues and the communities in which we live and work.
+            </section>
+        </article>
+
+        <footer id="footer">
+            &copy; 2017 Grant Thornton India – All rights reserved.
+        </footer>
+    </body>
+</html>
