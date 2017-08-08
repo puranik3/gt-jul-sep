@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Basic selectors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* selectors - id, class, tag */
+            #para-2 { /* id selector */ /* this styles loses */
+                color: red;
+            }
+
+            #para-2 { /* last one wins - #para-2 will be blue */
+                color: blue;
+            }
+
+            /* id selector is most specific */
+            #para-2 {
+                font-size: 5em;
+            }
+
+            /* p.intro selector is more "specific" compared to .intro selector */
+            p.intro { /* class selector */
+                font-size: 0.5em;
+            }
+
+            .intro { /* class selector */
+                font-size: 2.5em;
+            }
+
+            p { /* element/tag selector */ 
+                text-decoration: underline;
+            }
+
+            /* 
+                (a, b, c, d) 
+                a = 0 or 1, 1 for inline styles and 0 otherwise
+                b = number of ids
+                c = number of classes
+                d = number of elements
+                specificity value for this selector (0, 1, 0, 1)
+            */
+            #para-1 span {
+                font-weight: bold;
+            }
+
+            /*
+                (0, 0, 0, 2)
+            */
+            p span {
+                font-weight: normal;
+            }
+
+            /* in case specificities are equal then go in for order to decide which one wins */
+            #span-1 span {
+                font-weight: normal;
+            }
+
+            /* Rule 1: specificity > order */
+            /* 
+                Rule 2: id selector > class selector > element selector (in terms of specificity) 4
+                Calculate the specificities and resolve ties using the a,b,c,d tie-breaker algorithm
+            */
+            
+        </style>
+    </head>
+    <body>
+        <span id="span-1">
+            <span>A span within a span</span>
+        </span>
+        <p class="intro" id="para-1">
+            Para 1
+            <span class="para-span" id="para-1-span-1">A span within para 1</span>
+        </p>
+        <p id="para-2" class="intro" style="color: red;"> <!-- (1, x, y, z) -->
+            Para 2
+        </p>
+        <p>
+            Para 3
+        </p>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            p span { /* descendant selector */
+                color: red;
+            }
+
+            p > span { /* child selector */
+                color: blue;
+            }
+
+            span + span {
+                color: green;
+            }
+
+            /* Exercise: Explore span~span */
+
+
+        </style>
+    </head>
+    <body>
+        <p id="para-1">
+            Para 1
+            <span id="para-1-span-1">
+                Para 1 > Span 1
+                <span id="span-2">
+                    Para 1 Span 2
+                </span>
+                <a href="https://www.google.com">Google</a>
+                <span id="span-3">
+                    Para 1 Span 3
+
+                </span>
+                <span id="span-4">
+                    Para 1 Span 4
+                </span>
+            </span>
+        </p>
+
+        <style>
+            a[target] {
+                color: red;
+            }
+
+            a[href="#"] {
+                color: yellow;
+            }
+
+            a {
+                color: blue;
+            }
+        </style>
+        <a href="https://www.google.com">Google</a>
+        <a href="#">Not linked</a>
+        <a href="#">Not linked</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+
+        <style>
+            :focus { /* pseudo class that gets applied when input value is focused */
+                background-color: yellow;
+            }
+
+            span:hover {
+                box-shadow: 2px 2px 2px 2px gray;
+            }
+
+            a#medium-link:hover {
+                color: red;
+            }
+            
+            a#medium-link:visited {
+                color: goldenrod;
+            }
+
+            a#medium-link:active {
+                color: green;
+            }
+        </style>
+        First name: <input type="text" id="first-name" />
+        <span>Span with shadow on hover</span>
+        <a id="medium-link" href="https://www.medium.com">Medium</a>
+
+        <style>
+            #last-para :first-child {
+                color: yellow;
+            }
+
+            #last-para :last-child {
+                color: red;
+            }
+
+            #last-para :nth-child(even) {
+                color: purple;
+            }
+        </style>
+        <p id="last-para">
+            <span>Span 1</span>
+            <span>Span 2</span>
+            <span>Span 3</span>
+            <span>Span 4</span>
+        </p>
+    </body>
+</html>
