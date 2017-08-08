@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Scalable Vector Graphics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            #org-chart {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <svg width="1000" height="500" id="org-chart">
+            <rect width="160" height="50" x="420" y="20" style="fill:rgb(200,100,120);stroke-width:2;stroke:rgb(200,0,0)" id="ceo" />
+            <text fill="#ffffff" font-size="16" font-family="Verdana" x="470" y="50">SVG</text>
+        </svg>
+        <script>
+            var rect = document.getElementById( 'ceo' );
+            rect.onclick = function() {
+                window.location.href = "http://www.google.com";
+            };
+</script>
+
+
+    </body>
+</html>
