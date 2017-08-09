@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.gallery {
+    list-style-type: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.gallery-item {
+    float: left;
+    width: 200px;
+    padding: 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.gallery-item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px 3px #bbb;
+}
+
+.image-container {
+    height: 150px;
+    text-align: center;
+}
+
+.gallery-item img {
+    height: 100%;
+    opacity: 0.4;
+}
+
+.product-rating-n-reviews {
+    height: 24px;
+}
+
+.product-rating {
+    float: left;
+    display: block;
+    width: 75px;
+    text-align: left;
+}
+
+.product-rating .icon-rating {
+    opacity: 0.4;
+}
+
+.product-reviews {
+    float: right;
+    display: block;
+    width: 75px;
+    text-align: right;
+}
+
+.product-title {
+    height: 24px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-description {
+    height: 100px;
+}
+
+.icon-rating {
+    background-image	: url( '../img/rating-sprite.png' );
+    background-repeat	: no-repeat;
+    background-size		: 326px 19px;
+    display				: inline-block;
+    width               : 78px;
+	height				: 19px;
+}
+
+.icon-rating-5 {
+    background-position	: -2px 0px;
+}
+
+.icon-rating-4-5 {
+    background-position	: -167px 0px;
+}
+
+.gallery-item:hover img, .gallery-item:hover .icon-rating {
+    opacity: 1;
+}
+
+@media print {
+    .gallery-item .image-container {
+        display: none;
+    }
+}
