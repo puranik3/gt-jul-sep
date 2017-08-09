@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Inheritance</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            div {
+                color: red;
+                border: 1px solid black; /* not inherit */
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Some text within the div
+            <span><!-- style="border:inherit;"> --> <!-- use inherit keyword to inherit those properties that are not inherited by default -->
+                Some span with <span style="color: initial;"><!-- style="border:inherit;"> -->
+                    a div
+                </span>
+            </span>
+        </div>
+    </body>
+</html>

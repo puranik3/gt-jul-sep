@@ -1,0 +1,27 @@
+.accordion {
+}
+
+.accordion-item {
+    border: 1px solid crimson;
+}
+
+.accordion-item.active .accordion-body {
+    display: block;
+}
+
+.accordion-header {
+    padding: 10px;
+    background-color: lightpink;
+    cursor: pointer;
+}
+
+.accordion-body {
+    display: none;
+    padding: 10px;
+}
+
+/*
+.accordion-header:hover + .accordion-body {
+    display: block;
+}
+*/
