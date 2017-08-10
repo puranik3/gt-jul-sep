@@ -1,0 +1,38 @@
+.gallery-item {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 0px 40px 40px 0;
+}
+
+.product-image img {
+    width: 100%; /* makes the image responsive */
+}
+
+.product-rating-and-review {
+    overflow: auto;
+}
+
+.product-rating {
+    float: left;
+}
+
+.product-review {
+    float: right;
+}
+
+.rating {
+    background-image: url( "../images/rating-sprite.png" );
+    display: inline-block;
+    width: 78px;
+    height: 19px;
+}
+
+.rating-5 {
+    background-position: -3px 0px
+}
+
+.rating-4 {
+    background-position: -17px 0px;
+}

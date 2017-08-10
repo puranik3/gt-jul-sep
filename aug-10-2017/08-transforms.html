@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transforms</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            div {
+                height: 100px;
+                width: 100px;
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            div:nth-child(1) { 
+                -webkit-transform: rotate(45deg);
+                   -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                     -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+            }
+
+            div:nth-child(2) {
+                transform: scale(2, 3)
+            }
+
+            div:nth-child(3) {
+                transform: translate(200px, 300px)
+            }
+
+            div:nth-child(4) {
+                transform: skew(20deg, 45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Div 1
+        </div>
+        <div>
+            Div 2
+        </div>
+        <div>
+            Div 3
+        </div>
+        <div>
+            Div 4
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            div {
+                border: 1px solid black;
+                padding: 10px;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation: color-animation 5s infinite, move-animation 2.5s infinite;
+            }
+
+            @-webkit-keyframes color-animation {
+                0% { background-color: red; }
+                25% { background-color: green; }
+                50% { background-color: blue; }
+                75% { background-color: yellow; }
+                100% { background-color: red; }
+            }
+
+            @-moz-keyframes color-animation {
+                0% { background-color: red; }
+                25% { background-color: green; }
+                50% { background-color: blue; }
+                75% { background-color: yellow; }
+                100% { background-color: red; }
+            }
+
+            @-ms-keyframes color-animation {
+                0% { background-color: red; }
+                25% { background-color: green; }
+                50% { background-color: blue; }
+                75% { background-color: yellow; }
+                100% { background-color: red; }
+            }
+
+            @-o-keyframes color-animation {
+                0% { background-color: red; }
+                25% { background-color: green; }
+                50% { background-color: blue; }
+                75% { background-color: yellow; }
+                100% { background-color: red; }
+            }
+
+            @keyframes color-animation {
+                0% { background-color: red; }
+                25% { background-color: green; }
+                50% { background-color: blue; }
+                75% { background-color: yellow; }
+                100% { background-color: red; }
+            }
+
+            @keyframes move-animation {
+                0% { transform: translate(0px, 0px); }
+                25% { transform: translate(100px, 0px); }
+                50% { transform: translate(100px, 100px) }
+                75% { transform: translate(0px, 100px); }
+                100% { transform: translate(0px, 0px) }
+            }
+        </style>
+    </head>
+    <body>
+        <div>Div 1</div>
+    </body>
+</html>
