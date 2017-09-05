@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Manipulating CSS</title>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p style="text-transform: uppercase">
+            Ipsum et ut culpa pariatur nostrud ad sint. Occaecat magna eiusmod nulla officia culpa do Lorem ullamco commodo in. Commodo occaecat et adipisicing nisi adipisicing laboris eiusmod minim ea. Ex est qui cillum deserunt velit sunt aute culpa irure eiusmod tempor cillum. Exercitation amet sint laboris culpa cupidatat incididunt et labore mollit voluptate veniam et mollit. Fugiat ullamco laboris do in ipsum duis exercitation elit aute labore.
+        </p>
+        <p style="text-transform: lowercase;">
+            Ipsum et ut culpa pariatur nostrud ad sint. Occaecat magna eiusmod nulla officia culpa do Lorem ullamco commodo in. Commodo occaecat et adipisicing nisi adipisicing laboris eiusmod minim ea. Ex est qui cillum deserunt velit sunt aute culpa irure eiusmod tempor cillum. Exercitation amet sint laboris culpa cupidatat incididunt et labore mollit voluptate veniam et mollit. Fugiat ullamco laboris do in ipsum duis exercitation elit aute labore.
+        </p>
+
+        <script>
+            $( document ).ready(function() {
+                $( 'p' ).css(
+                    {
+                        'color': 'red',
+                        'font-weight': 'bold'
+                    }
+                );
+
+                console.log( $( 'p' ).css( 'text-transform' ) );
+            });
+        </script>
+    </body>
+</html>

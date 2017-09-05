@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+        <Script>
+            $(document).ready(
+                function() {
+                    // .. code to be executed once DOM nodes have been created
+                }
+            );
+        </script>
+    </head>
+    <body>
+        <p id="para-1" class="intro-para">
+            Voluptate cupidatat nulla fugiat ullamco sit voluptate officia labore eiusmod nisi nulla laboris commodo. Id in quis culpa ex officia dolor nostrud labore ea laborum nostrud veniam. Minim voluptate in eiusmod dolore voluptate.
+        </p>
+        <p id="para-2" class="intro-para">
+            Nisi in ad incididunt nisi deserunt. Nulla sint labore nisi laborum dolor qui elit. Nostrud deserunt proident nisi minim ex labore do ex aliquip. Enim nulla incididunt officia laborum labore voluptate elit proident. Aliquip adipisicing aliquip Lorem amet elit eiusmod dolor non magna labore duis amet laboris.
+        </p>
+        <p id="para-3" class="concluding-para">
+            Nulla reprehenderit dolore sit adipisicing id nisi sunt aliqua tempor quis do reprehenderit. Non consectetur ea magna est nulla nisi ea elit Lorem aute. Commodo eiusmod velit sint est. Adipisicing officia consectetur enim cupidatat voluptate fugiat anim quis nulla ea est magna deserunt mollit. Officia pariatur id sunt elit nostrud elit eiusmod mollit aliqua tempor et anim. Excepteur tempor ipsum aliqua magna exercitation excepteur cillum non officia. Nulla nulla voluptate do Lorem do pariatur commodo ullamco.
+        </p>
+
+        <script>
+            $( document ).ready(function() {
+                // $ is an function that jquery defines
+                console.log( $ );
+                console.log( jQuery );
+                console.log( $ === jQuery );
+
+                // What does $ take as argument
+                // various ways arguments can be passed
+                // pass a CSS selector selector
+                
+                // the return value of $() is a jQuery collection object
+                var introParas = $( '.intro-para' );
+                console.log( introParas );
+
+                // the jQuery collection object is used to manipulate styles and html
+
+                // inline css manipulated using css() method
+                introParas.css( 'color', 'red' ); // css() is a collection object method
+
+                // html() method is used to manipulate HTML within an element
+                setTimeout(
+                    function() {
+                        $( '#para-3' ).html( 'Some new content' );
+                    },
+                    2000
+                );
+            });
+        </script>
+    </body>
+</html>

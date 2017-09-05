@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Manipulating HTML</title>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p id="para-1" class="intro-para">
+            Paragraph 1
+        </p>
+        <p id="para-2" class="intro-para">
+            Paragraph 2
+        </p>
+        <p id="para-3" class="concluding-para">
+            Paragraph 3
+        </p>
+        <div id="div-1">
+            <span>Div 1 (first element within div 1)</span>
+            <span>Second element within div 1</span>
+        </div>
+
+        <script>
+            $( document ).ready(function() {
+                var $paras = $( 'p' );
+                console.log( $paras );
+
+                var someText = $paras.html(); // used to get HTML here - returns the inner HTML for the first DOM node in the collection
+                console.log( someText );
+                console.log( $paras.eq(1).html() ); // use instead of $( $paras[1] ).html()
+
+                $paras.html( '<strong>New content<strong>' ); // used to set HTML here
+
+                // attribute manipulation
+                $paras.eq(2).attr( "title", "Conclusion" );
+                $paras.eq(2).removeAttr("class");
+                $paras.eq(2).attr( "title", "THe last paragraph" );
+                console.log( $paras.eq(2).attr( 'title' ) );
+
+                $paras.attr( 'title', 'A paragraph' );
+                console.log( $paras.attr( 'id' ) );
+
+                // manipulating DOM selectively using collection methods (html() methods completely replaces existing HTML)
+                
+                // creates a new DOM node - the DOM node is not yet part of the HTML document
+                var $newSpan = $( '<span>A Span to go within para 1</span>' ); 
+
+                // now we add it to the end of paragraph 1
+                $( '#para-1' ).append( $newSpan );
+                $( '#para-1' ).prepend( $newSpan );
+
+                $( '#div-1 > span' ).eq(0).after( $newSpan );
+                $( '#div-1 > span' ).eq(0).before( $( '<span>Another span</span>' ) );
+            });
+        </script>
+    </body>
+</html>
