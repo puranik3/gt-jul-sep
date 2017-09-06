@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Icons | Using Font Awesome</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        
+        <!-- Include Font Awesome from a CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Or include it from a local path -->
+        <!--
+        <link rel="stylesheet" href="../../../node_modules/font-awesome/css/font-awesome.min.css">
+        -->
+
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            .fa-danger {
+                color: lightgray;
+                cursor: pointer;
+            }
+
+            .fa-danger:hover {
+                color: #a94442;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!--
+                Zoom into this page on the browser and verify that icon fonts scale well - they should look good even when zoomed in/out (unlike images used as icons)
+            -->
+            <h1>Icons - Font Awesome</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Using Font Awesome (also an icon font)                   
+            </p>
+            <p>
+                <small>.fa.fa-home</small>
+                <i class="fa fa-home"></i>
+            </p>
+            <p>
+                <small>.fa.fa-linkedin</small>
+                <i class="fa fa-linkedin"></i>
+                <small>.fa.fa-twitter</small>
+                <i class="fa fa-twitter"></i>
+            </p>
+
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : Customizing using text and font properties - scaling icons and changing colors. Font Awesome provides many modifier classes that can be put to good use.
+            </p>
+            <p>
+                <small>.fa.fa-remove.fa-lg</small>
+                <!-- 
+                    We use the FontAwesome-defined .fa-lg class to have icons bigger than usual size 
+                    We define a custom .fa-danger to have icons in danger themed color
+                -->
+                <i class="fa fa-remove fa-lg fa-danger"></i>
+            </p>
+            <p>
+                <small>.fa.fa-remove.fa-2x</small>
+                <!-- 
+                    We use the FontAwesome-defined .fa-lg class to have icons bigger than usual size 
+                    We define a custom .fa-danger to have icons in danger themed color
+                -->
+                <i class="fa fa-remove fa-2x fa-danger"></i>
+            </p>
+
+            <p class="demo-bite-sized">
+                <strong>Demo C</strong> : Customizing bulleted lists
+            </p>
+            <p>
+                <small>.fa-ul</small> for list element and <small>.fa-li.fa.fa-*</small> inside list item
+            </p>
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-linkedin"></i> LinkedIn</li>
+                <li><i class="fa-li fa fa-twitter"></i> Twitter</li>
+                <li><i class="fa-li fa fa-facebook"></i> Facebook</li>
+                <li><i class="fa-li fa fa-instagram"></i> Instagram</li>
+            </ul>
+
+            <p class="demo-bite-sized">
+                <strong>Demo D</strong> : Spin and Pulse animations on icons
+            </p>
+            <p>
+                <small>.fa.fa-spinner.fa-spin</small>
+                <br /> 
+                <i class="fa fa-spinner fa-spin"></i>
+                <span class="sr-only">Loading...</span>
+
+                <br/>
+
+                <small>.fa.fa-spinner.fa-pulse</small> 
+                <br />
+                <i class="fa fa-3x fa-spinner fa-pulse fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </p>
+
+            <p class="demo-bite-sized">
+                <strong>Demo E</strong> : Rotating icons, Flipping icons vertically and horizontally
+            </p>
+            <p>
+                <small>.fa.fa-pencil.fa-rotate-[90|180|270]</small>
+                <br />
+                <i class="fa fa-pencil"></i> (original)
+                <br /> 
+                <i class="fa fa-pencil fa-rotate-90"></i>
+                <br />
+                <i class="fa fa-pencil fa-rotate-180"></i>
+                <br />
+                <i class="fa fa-pencil fa-rotate-270"></i>
+            </p>
+            <p>
+                <small>.fa.fa-shield.fa-flip-[horizontal|vertical]</small>
+                <br />
+                <i class="fa fa-shield"></i> (original)
+                <br />
+                <i class="fa fa-shield fa-flip-horizontal"></i>
+                <br /> 
+                <i class="fa fa-shield fa-flip-vertical"></i>
+            </p>
+        </div>
+    </body>
+</html>

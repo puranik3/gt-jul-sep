@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Event handling</title>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p id="para-1" class="intro-para">
+            Voluptate cupidatat nulla fugiat ullamco sit voluptate officia labore eiusmod nisi nulla laboris commodo. Id in quis culpa ex officia dolor nostrud labore ea laborum nostrud veniam. Minim voluptate in eiusmod dolore voluptate.
+        </p>
+        <p id="para-2" class="intro-para">
+            Nisi in ad incididunt nisi deserunt. Nulla sint labore nisi laborum dolor qui elit. Nostrud deserunt proident nisi minim ex labore do ex aliquip. Enim nulla incididunt officia laborum labore voluptate elit proident. Aliquip adipisicing aliquip Lorem amet elit eiusmod dolor non magna labore duis amet laboris.
+        </p>
+        <button>Some button</button>
+
+        <script>
+            $( document ).ready(function() {
+                $( 'button' ).click(function() {
+                    alert( 'button has been clicked' );
+                });
+
+                /*
+                $('p').click(function() {
+                    console.log( this ); // refers to actual DOM node which has been clicked
+                    $( this ).css( 'color', 'red' );
+                    alert( 'paragraph has been clicked' );
+                });
+                */
+                /*
+                $('p').on('click', function() {
+                    console.log( this ); // refers to actual DOM node which has been clicked
+                    $( this ).css( 'color', 'red' );
+                    alert( 'paragraph has been clicked' );
+                });*/
+                $('p').on(
+                    {
+                        click: function( $event ) {
+
+                            console.log( 'p has been clicked' );
+                        },
+                        mouseover: function( $event ) {
+                            console.log( $event.clientX, $event.clientY ); // what are the coordinates of the mouse pointer??
+                            console.log( 'mouse is over p' );
+                        }
+                    }
+                );
+            });
+        </script>
+    </body>
+</html>

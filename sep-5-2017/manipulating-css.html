@@ -9,12 +9,22 @@
         src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
         crossorigin="anonymous"></script>
+        <style>
+            .underline {
+                text-decoration: underline;
+            }
+
+            .some-class {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
-        <p style="text-transform: uppercase">
+        <p style="text-transform: uppercase" class="dummy">
             Ipsum et ut culpa pariatur nostrud ad sint. Occaecat magna eiusmod nulla officia culpa do Lorem ullamco commodo in. Commodo occaecat et adipisicing nisi adipisicing laboris eiusmod minim ea. Ex est qui cillum deserunt velit sunt aute culpa irure eiusmod tempor cillum. Exercitation amet sint laboris culpa cupidatat incididunt et labore mollit voluptate veniam et mollit. Fugiat ullamco laboris do in ipsum duis exercitation elit aute labore.
         </p>
-        <p style="text-transform: lowercase;">
+        <p style="text-transform: lowercase;" class="dummy">
             Ipsum et ut culpa pariatur nostrud ad sint. Occaecat magna eiusmod nulla officia culpa do Lorem ullamco commodo in. Commodo occaecat et adipisicing nisi adipisicing laboris eiusmod minim ea. Ex est qui cillum deserunt velit sunt aute culpa irure eiusmod tempor cillum. Exercitation amet sint laboris culpa cupidatat incididunt et labore mollit voluptate veniam et mollit. Fugiat ullamco laboris do in ipsum duis exercitation elit aute labore.
         </p>
 
@@ -26,6 +36,11 @@
                         'font-weight': 'bold'
                     }
                 );
+
+                $( 'p:first-child' ).addClass( 'underline' ); // add a class in jQuery code
+                console.log( $( 'p:first-child' ).hasClass( 'underline' ) ); // true
+                console.log( $( 'p:first-child' ).hasClass( 'bold' ) ); // false
+                console.log( $( 'p:first-child' ).removeClass( 'dummy' ) );
 
                 console.log( $( 'p' ).css( 'text-transform' ) );
             });

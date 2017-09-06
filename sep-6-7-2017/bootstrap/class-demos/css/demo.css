@@ -1,0 +1,10 @@
+small {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+}
+
+.demo-bite-sized {
+    margin: 40px 0 10px 0;
+    font-size: 1.4em;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "bootstrap-training-material",
+  "version": "1.0.0",
+  "description": "Bootstrap Training Material",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bootstrap",
+    "font awesome",
+    "sass",
+    "responsive web design",
+    "responsive",
+    "training"
+  ],
+  "author": "Prashanth Puranik <puranik@digdeeper.in>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}

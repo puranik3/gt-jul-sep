@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Site Navigation | Navbar</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            /*
+                When fixing navbars at the top, make sure to give a padding-top/margin-top on body.
+                Since navbars are by default 50px in height, a value greater than 50px is necessary
+            */
+            /*
+            body {
+                margin-top: 70px;
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <!-- try .navbar-inverse instead of .navbar-default -->
+        <!-- use .navbar-fixed-top and .navbar-fixed-bottom to fix to top/bottom -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--
+                        Toggle button is given .navbar-toggle with data-toggle="collapse" and data-target="[main menu css selector]"
+                    -->
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <!--
+                            The toggle button is usually indicated by the "Menu" keyword or the Hamburger icon (3 parallel horizontal lines)
+                        -->
+                        Menu
+                        <!--
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        -->
+                    </button>
+                    <!-- Branding goes in here (usually company name and/or logo) -->
+                    <div class="navbar-brand">
+                        ABC Consulting
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">About us</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <!-- 
+                            Submenu can be created using these classes and attributes
+                            Classes: .dropdown, .dropdown-toggle, .dropdown-menu
+                            Attributes: data-toggle, href (equivalent to data-target in case of anchor tag)
+                            Divider lines given using .divider
+                        -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Portfolio
+                                <!-- Give a caret icon as indicator that a sub menu exists -->
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!--
+                                    Multi-level sub menus are not supported natively in Bootstrap.
+                                    You can find third-party implementations for this. Some samples are listed below.
+                                    https://codepen.io/ajaypatelaj/pen/prHjD
+                                    https://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3
+                                -->
+                                <li><a href="consultancy.html">Development</a></li>
+                                <li><a href="consultancy.html">Consultancy</a></li>
+                                <li><a href="training.html">Training</a></li>
+                                <div class="divider"></div>
+                                <li><a href="miscellaneous.html">Miscellaneous</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                    <!-- 
+                        Multiple navs can exist. Float them to left/right using .navbar-[left|right
+                    -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <h1>Site Navigation - Navbar</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Navbar is used to provide the primary site navigation menu.
+            </p>
+            <p>
+                <small>.navbar</small> on top-level container and <small>.navbar-default</small> and <small>.navbar-inverse</small> modifier classes. Navbars have 2 optional parts (which are usually used) - header and body (also called nav).
+                <br />
+            </p>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li><a href="./02-pagination.html" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li><a href="./01-breadcrumbs.html">1</a></li>
+                    <li ><a href="./02-pagination.html">2 <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="./03-navbar.html">3</a></li>
+                    <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+
+            <p>
+                Est pariatur cupidatat adipisicing nostrud duis laboris amet ipsum consectetur esse. Officia velit exercitation nisi laboris proident ad nisi non aliquip do aliquip. Duis eu elit incididunt veniam excepteur nulla et velit laborum Lorem voluptate adipisicing cupidatat. Ad qui labore do velit culpa nulla officia quis.
+            </p>
+
+            <p>
+                Ullamco cillum Lorem consequat ut eiusmod veniam consequat. Esse laborum sit nulla sunt excepteur. Est labore elit voluptate ullamco aliquip pariatur in veniam sint enim irure excepteur proident in. Ea sunt nisi qui voluptate. Eiusmod qui excepteur cupidatat adipisicing culpa ut eu veniam tempor ullamco cupidatat esse. Fugiat incididunt nostrud magna ex sint anim nostrud.
+            </p>
+
+            <p>
+                Duis consectetur laborum ex eiusmod culpa aliqua veniam commodo non deserunt deserunt ad. Ex voluptate amet enim culpa excepteur laborum excepteur tempor. Minim quis voluptate eiusmod et et Lorem nulla. Irure nisi laborum elit id deserunt aliquip. Esse ex id adipisicing sint nulla Lorem ex adipisicing.
+            </p>
+
+            <p>
+                Quis ut anim quis commodo ea tempor ullamco id exercitation reprehenderit do mollit pariatur occaecat. Culpa sit consectetur nostrud sint ad irure sit minim mollit sit consectetur labore. Nostrud est ex ex eiusmod id cupidatat laboris enim ullamco tempor consectetur adipisicing. Mollit velit in do ut. Sunt velit exercitation do elit cupidatat. Magna sit ea do id exercitation excepteur sint enim culpa elit deserunt. Aute sit Lorem commodo do consectetur aliquip ullamco deserunt eu incididunt.
+            </p>
+
+            <p>
+                Magna magna quis non Lorem. Do aliqua nostrud id minim tempor. Laborum exercitation dolor amet cillum pariatur sint. Sunt pariatur magna sunt dolor cupidatat elit culpa sint sint voluptate.
+            </p>
+
+            <p>
+                Id elit mollit nisi culpa amet nostrud nostrud culpa officia sit minim laborum. Reprehenderit ex eu aute ea commodo adipisicing. Velit duis ipsum ex incididunt consectetur. Tempor dolore ad consequat aliqua et ex officia. Non nisi sit cillum quis anim ex voluptate aliqua voluptate qui. Ullamco est id velit anim.
+            </p>
+
+            <p>
+                Laborum ex est enim Lorem laborum occaecat pariatur Lorem dolore nostrud do. Quis fugiat est ullamco dolore aliqua proident aute esse irure Lorem. Laborum consequat incididunt nisi aliqua anim labore et occaecat eiusmod labore magna proident commodo irure. Tempor proident culpa ipsum do Lorem dolore. Non minim cillum non ex officia dolore laborum qui sunt Lorem ipsum non pariatur excepteur. Reprehenderit culpa aliqua enim dolore amet pariatur incididunt ullamco adipisicing Lorem elit exercitation. Non quis excepteur irure tempor eu.
+            </p>
+
+            <p>
+                Do id aliqua commodo aute laborum culpa cupidatat ad mollit cillum mollit qui ea ea. Ipsum incididunt deserunt ullamco in et labore ea anim veniam incididunt ea aliqua eiusmod. Consectetur qui adipisicing et ea aliqua consequat aliquip ea nulla enim enim consectetur quis.
+            </p>
+        </div>
+
+        <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

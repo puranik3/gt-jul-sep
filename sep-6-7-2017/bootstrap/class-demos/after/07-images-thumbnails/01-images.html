@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Images</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            .img-circle, .img-rounded, .img-thumbnail {
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Images</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Styling image shapes        
+            </p>
+            <p>
+                <small>.img-circle</small>
+                <br />
+                <img src="../../images/twitter.jpg" class="img-circle" />
+            </p>
+            <p>
+                <small>.img-rounded</small>
+                <br />
+                <img src="../../images/twitter.jpg" class="img-rounded" />
+            </p>
+            <p>
+                <small>.img-thumbnail</small>
+                <br />
+                <img src="../../images/twitter.jpg" class="img-thumbnail" />
+                <br />
+                <strong>Note</strong>: Custom thumbnails with text content can be created using a separate component that is covered later.
+            </p>
+
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : Images can be contained within their parent container using img-responsive. Center them using .center-block   
+            </p>
+            <p>
+                <!--
+                    Resize the window and check that the image too resizes at smaller viewport widths
+                -->
+                <div>
+                    <small>.img-responsive.center-block</small>
+                    <img src="../../images/twitter.jpg" class="img-responsive center-block" />
+                </div>
+            </p>
+        </div>
+    </body>
+</html>

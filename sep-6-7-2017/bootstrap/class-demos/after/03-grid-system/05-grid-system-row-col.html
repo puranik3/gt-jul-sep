@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Grid System | Rows and columns</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            .row.colored [class^="col-"] {
+                color: white;
+                text-align: center;
+            }
+
+            .row.colored [class^="col-"]:nth-child(odd) {
+                background: olive;
+            }
+
+            .row.colored [class^="col-"]:nth-child(even) {
+                background: maroon;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rows and columns</h1>
+            <hr/>
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Further divide columns by providing .row and .col-* within columns
+            </p>
+            <div class="row text-justify">
+                <div class="col-sm-2">
+                    <p class="text-center">
+                        Col 1 - 2
+                        <br />
+                        <small>.col-sm-2</small>
+                    </p>
+                    Pariatur id est ea aliqua ad occaecat anim incididunt. Voluptate consequat ipsum id laboris incididunt veniam proident aliquip reprehenderit qui commodo. Amet exercitation reprehenderit laborum mollit excepteur nostrud qui. Aliqua excepteur ad do consectetur est incididunt nisi. Incididunt proident nisi amet ut eiusmod deserunt tempor qui non enim. Velit dolor pariatur amet dolor id id laboris do.
+                </div>
+                <div class="col-sm-10">
+                    <p class="text-center">
+                        Col 3 - 12 merged
+                        <br />
+                        <small>.col-sm-10</small>
+                    </p>
+
+                    We split this column into 12 equal-width columns in turn
+                    <br /><br />
+
+                    <div class="row colored">
+                        <div class="col-xs-1">
+                            Col 1
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 2
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 3
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+        
+                        <div class="col-xs-1">
+                            Col 4
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 5
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 6
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+        
+                        <div class="col-xs-1">
+                            Col 7
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 8
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 9
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+        
+                        <div class="col-xs-1">
+                            Col 10
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 11
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                        <div class="col-xs-1">
+                            Col 12
+                            <br />
+                            <small>.col-xs-1</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

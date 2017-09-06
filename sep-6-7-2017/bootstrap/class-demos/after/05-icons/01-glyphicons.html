@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Icons | Using Glyphicons</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            .glyphicon-lg {
+                font-size: 2em;
+            }
+
+            .glyphicon-danger {
+                color: lightgray;
+                cursor: pointer;
+            }
+
+            .glyphicon-danger:hover {
+                color: #a94442;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!--
+                Zoom into this page on the browser and verify that icon fonts scale well - they should look good even when zoomed in/out (unlike images used as icons)
+            -->
+            <h1>Icons - Glyphicons</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Using Glyphicons                       
+            </p>
+            <p>
+                <small>.glyphicon.glyphicon-home</small>
+                <i class="glyphicon glyphicon-home"></i>
+            </p>
+            <p>
+                <small>.glyphicon.glyphicon-ok</small>
+                <i class="glyphicon glyphicon-ok"></i>
+                <small>.glyphicon.glyphicon-remove</small>
+                <i class="glyphicon glyphicon-remove"></i>
+            </p>
+            <p>
+                <small>.glyphicon.glyphicon-chevron-left</small>
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                <small>.glyphicon.glyphicon-chevron-right</small>
+                <i class="glyphicon glyphicon-chevron-right"></i>
+            </p>
+
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : Customizing icons fonts using text and font properties - scaling icons and changing colors
+            </p>
+            <p>
+                <small>.glyphicon.glyphicon-remove</small>
+                <!-- 
+                    We define a custom .glyphicon-lg class to have icons twice the size 
+                    We define a custom .glyphicon-danger to have icons in danger themed color when hovered upon
+                -->
+                <i class="glyphicon glyphicon-remove glyphicon-lg glyphicon-danger"></i>
+            </p>
+        </div>
+    </body>
+</html>

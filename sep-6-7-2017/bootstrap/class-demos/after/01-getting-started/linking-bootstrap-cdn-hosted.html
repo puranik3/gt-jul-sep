@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Linking Bootstrap framework files | CDN-hosted</title>
+        
+        <!--
+            Note:
+            During development of project, you may use the non-minified versions of JS, CSS files too.
+            For production environment make sure to use only minified versions.
+        -->
+
+        <!-- Required include: The base set of styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+        
+        <!-- Optional include: Default theme file - an enhanced set of styles mostly using CSS3 features -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha256-ZT4HPpdCOt2lvDkXokHuhJfdOKSPFLzeAJik5U/Q+l4=" crossorigin="anonymous" />
+    </head>
+    <body>
+        <!--
+            // Your HTML markup goes in here
+        -->
+        
+        <!-- The .js files are required only if you use JS components like modal dialogs, collapsible panels etc. -->
+        
+        <!-- jQuery is required internally by Bootstrap -->
+        <!-- Using 1.x version of jQuery. You can use 3.x version if you are sure about NOT supporting old IE versions -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        
+        <!-- Optional: Include this if you want to support IE8 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+        
+        <!-- This file makes JS components like modal dialogs, collapsible panels etc. function -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+    </body>
+</html>
