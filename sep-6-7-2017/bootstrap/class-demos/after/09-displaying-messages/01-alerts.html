@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Displaying Messages | Alerts</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Displaying Messages - Alerts</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : <small>.alert</small> and <small>.alert-[theme]</small>. Add <small>.alert-dismissable</small> for dismissible alerts. Use data-dismiss="alert" to make a button close the alert component in which it exists (requires jQuery). Add .fade.in for animated show and dismiss.
+            </p>
+
+            <div class="alert alert-success alert-dismissable fade in" id="lottery-alert">
+                <button class="close" data-dismiss="alert">&times;</button>
+                Congratulations! Your have won our annual lottery of $10,000,000.
+            </div>
+
+            <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    // most JS components have a JS API to work with the compoennt in JS scripts
+                    // Example: automatically close the alert after 10 seconds using the alert() method and pass it the string 'close'
+                    setTimeout(
+                        function() {
+                            $( '#lottery-alert' ).alert( 'close' );
+                        },
+                        10000
+                    );
+
+                    // Bootstrap JS components fire events at various points which may be of interest to a developer - events are "namespaced" with 'bs' and and the component name (eg. 'alert')
+                    // Example: display a message in the console once the alert is closed
+                    $( '#lottery-alert' ).on( 'closed.bs.alert', function() {
+                        console.log( 'alert was closed' );
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

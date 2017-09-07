@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Displaying Data | List Groups</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <style>
+            small.highlight {
+                font-weight: bold;
+                background-color: yellow;
+                color: black;
+            }
+
+            .demo-bite-sized {
+                margin: 40px 0 10px 0;
+                font-size: 1.4em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Displaying Data - List Groups</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : For non-clickable list use ul<small class="highlight">.list-group</small> and li<small class="highlight">.list-group-item</small>
+            </p>
+
+            <h4>List of Holidays</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h4>
+                        Republic Day
+                        <br />
+                        <small>Thursday January 26, 2017</small>
+                    </h4>
+                </li>
+                <li class="list-group-item">
+                    <h4>
+                        Mahashivratri
+                        <br />
+                        <small>Friday February 24, 2017</small>
+                    </h4>
+                </li>
+                <li class="list-group-item">
+                    <h4>
+                        Holi
+                        <br />
+                        <small>Monday March 13, 2017</small>
+                    </h4>
+                </li>
+            </ul>
+
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : For clickable list use div and anchor tags. Use <small class="highlight">.list-group-item-[theme]</small> (no primary) on li/a, <small class="highlight">.active</small> for active item, and <small class="highlight">.disabled</small> for disabled item.
+                <br />
+                A badge right within .list-group-item will be floated to right by defsult.
+            </p>
+
+            <h4>Recommended Phones</h4>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-warning" href="https://www.amazon.in/Samsung-Galaxy-Midnight-Black-RAM/dp/B06Y3GYZKW/ref=sr_1_2?ie=UTF8&qid=1504712394&sr=8-2&keywords=samsung+galaxy+S8">
+                    <span class="badge">22 sellers</span>
+                    <h5>
+                        Samsung Galaxy S8 (Hurry! Only 3 pieces left)
+                        <br />
+                        <small>Rs. 57,900</small>
+                    </h5>
+                </a>
+                <a class="list-group-item active" href="https://www.amazon.in/OnePlus-Midnight-Black-128GB-memory/dp/B01MXZW51M/ref=sr_1_2?s=electronics&ie=UTF8&qid=1504712420&sr=1-2&keywords=oneplus+5">
+                    <span class="badge">Amazon exclusive</span>
+                    <h5>
+                        One Plus 5
+                        <br />
+                        <small>Rs. 37,999</small>
+                    </h5>
+                </a>
+                <a class="list-group-item disabled">
+                    <span class="badge">5 sellers</span>
+                    <h5>
+                        Apple iPhone 7 (Out of stock)
+                        <br />
+                        <small>Rs. 53,999</small>
+                    </h5>
+                </a>
+            </ul>
+
+            <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>

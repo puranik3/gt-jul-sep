@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Linking Boostrap files</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <style>
+            /* Add back default margins for body that browsers provided and Bootstrap removed */
+            body {
+                margin: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" class="btn btn-primary" value="Buy this product" />
+        <input type="button" class="btn btn-success" value="Buy this product" />
+        <input type="button" class="btn btn-info" value="Buy this product" />
+        <input type="button" class="btn btn-warning" value="Buy this product" />
+        <input type="button" class="btn btn-danger" value="Buy this product" />
+        <input type="button" class="btn btn-default" value="Buy this product" />
+        
+        <br />
+        <br />
+        
+        <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+        
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">Tab 1</div>
+                <div role="tabpanel" class="tab-pane" id="profile">Tab 2</div>
+                <div role="tabpanel" class="tab-pane" id="messages">Tab 3</div>
+                <div role="tabpanel" class="tab-pane" id="settings">Tab 4</div>
+            </div>
+        </div>
+
+        <!-- respond.js is required in order to support IE8 -->
+        <!-- respond.js gives support for media queries on IE8 (media queries in a css3 feature required by Bootstrap to function) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

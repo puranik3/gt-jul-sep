@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Displaying Messages | Modal Dialogs</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Displaying Messages - Modal Dialogs</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Trigger for dialog created using data-toggle="modal", data-target/href for button/link (anchor tag).
+                <br />
+                Main classes are <small>.modal</small>, <small>.modal-dialog</small>, <small>.modal-content</small>. Three optional parts of .modal-content are 
+                <ul>
+                    <li><small>.modal-header</small> (with <small>.modal-title</small>) with <small>.close</small> (close button)</li>
+                    <li><small>.modal-body</small> - can have any HTML within - example login form</li>
+                    <li><small>.modal-footer</small></li>
+                </ul>
+                <br />
+                Animated entry/exit using <small>.fade</small>.modal
+                <br />
+                Add <small>.modal-sm</small>, <small>.modal-lg</small>.modal-dialog for size adjustments
+                <br />
+                Use data-dismiss="modal" for any dismiss trigger.
+                <br />
+                <strong>Note</strong>: trigger is the one that opens the dialog and dismiss trigger is the one that closes it.
+            </p>
+
+            <a data-toggle="modal" href='#tnc'>View terms and conditions</a>
+            <br /><br />
+            <button class="btn btn-primary" data-toggle="modal" data-target='#tnc'>View terms and conditions</button>
+            
+            <div class="modal fade" id="tnc">
+                <div class="modal-dialog modal-sm"> <!-- try modal-lg for large-sized dialog -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Terms and Conditions</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ol>
+                                <li>Occaecat eiusmod exercitation officia sit est pariatur irure laborum.</li>
+                                <li>Lorem exercitation exercitation ex elit proident nisi excepteur deserunt sint aliqua quis irure.</li>
+                                <li>Laborum irure velit pariatur magna ea dolor laboris est adipisicing id et.</li>
+                                <li>Ipsum culpa cillum in cupidatat reprehenderit sit exercitation do eiusmod commodo ut ex.</li>
+                            </ol>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : $().modal( options ) is used to configure a dialog via JS.
+                <br />
+                <strong>Example</strong> backdrop : 'static' is an options property that prevents dismiss of dialog on click of overlay backdrop; data-backdrop="static" does the same via HTML.
+                <br />
+                Use $( ).modal('hide|show|toggle') to control dialog visibility.
+                <br />
+                Event handling is also supported (example 'hidden.bs.modal')
+                <br />
+            </p>
+            
+            <div style="position: fixed; bottom: 0px; right: 0px; z-index: 2000; width: 200px; padding: 10px; border: 1px solid black; border-radius: 4px; margin: 10px; background-color: rgba(255, 255, 255, 0.65);">
+                Controls for Demo B
+                <br />
+                <a class="btn btn-primary btn-block" data-toggle="modal" href='#modal-id'>Trigger modal</a>
+                <br />
+                <button class="btn btn-default btn-block" id="btn-open-dialog">Open dialog</button>
+                <br />
+                <button class="btn btn-default btn-block" id="btn-hide-dialog">Hide dialog</button>
+                <br />
+                <button class="btn btn-default btn-block" id="btn-toggle-dialog">Toggle dialog</button>
+            </div>
+
+            <!-- data-backdrop="static" does the same things as the script below -->
+            <div class="modal fade" id="modal-id">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            Irure dolore velit proident ipsum deserunt ad nulla est officia qui. Proident veniam excepteur ullamco elit pariatur dolore sunt sit. Consequat eiusmod officia pariatur id aliquip ad mollit. Laborum commodo ea aute incididunt proident. Sit tempor veniam ea duis sit commodo irure enim velit. Adipisicing labore sunt est ipsum culpa sit ipsum magna commodo cupidatat ipsum.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    /* configure the dialog to prevent dismiss on tap of modal dialog backdrop */
+                    $( '#modal-id' ).modal({
+                        backdrop: 'static',
+                        show: false // required to prevent showing on document ready
+                    });
+
+                    $( '#btn-open-dialog' ).click(function() {
+                        $( '#modal-id' ).modal( 'show' );
+                    });
+
+                    $( '#btn-hide-dialog' ).click(function() {
+                        $( '#modal-id' ).modal( 'hide' );
+                    });
+
+                    $( '#btn-toggle-dialog' ).click(function() {
+                        $( '#modal-id' ).modal( 'toggle' );
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Displaying Data | Tables</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Displaying Data - Tables</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : <small>.table</small> to table (base class), <small>.table-striped</small> for zebra-striping, <small>.table-bordered</small> for borders on table, <small>.table-hover</small> for hover highlighting on rows.
+                <br /><br />
+                Add <small>.active</small> or <small>.[theme]</small> class on tr/td. 
+                <br /><br />
+                Add <small>.table-responsive</small> to get horizontally scrollable responsive table on small screens and lower.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Name</th>
+                            <th>Email id</th>
+                            <th>Phone number</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>john@example.com</td>
+                            <td>9876543210</td>
+                            <td>Dolore anim ullamco do nulla amet nulla sunt consectetur id duis.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mary</td>
+                            <td>mary@example.com</td>
+                            <td>9876543211</td>
+                            <td>Aute ex ullamco anim occaecat non.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ravi</td>
+                            <td>ravi@example.com</td>
+                            <td>9876543212</td>
+                            <td>Anim dolore amet proident culpa labore aute anim culpa adipisicing est occaecat sit consequat dolor.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Geeta</td>
+                            <td>geeta@example.com</td>
+                            <td>9876543213</td>
+                            <td>Dolore proident occaecat reprehenderit deserunt pariatur ad consequat nostrud aliquip.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="success">Barry</td>
+                            <td>barry@example.com</td>
+                            <td>9876543214</td>
+                            <td>Qui mollit mollit laborum ut enim sit elit fugiat minim do tempor consequat ullamco esse.</td>
+                        </tr>
+                        <tr class="active">
+                            <td>6</td>
+                            <td>Carla</td>
+                            <td>carla@example.com</td>
+                            <td>9876543215</td>
+                            <td>Esse ex adipisicing ullamco do mollit veniam.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>

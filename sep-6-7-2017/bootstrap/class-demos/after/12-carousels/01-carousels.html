@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Carousels</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Carousels</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Usually used with images (though not necessary). Three parts of a carousel are items, indicators and controls.
+                <br /><br />
+                Classes involved are <small>.carousel</small>, <small>.slide</small>, <small>.carousel-inner</small>, <small>.item</small>, <small>.carousel-caption</small>, ol<small>.carousel-indicators</small>, li<small>.active</small> (indicator and item, <small>.carousel-control</small>, <small>.left</small>, <small>.right</small>. Add <small>.glyphicon-chevron-left</small>, <small>.glyphicon-chevron-right</small> icons for controls - alternatively <small>.icon-prev</small>, <small>.icon-next</small>.
+                <br /><br />
+                Add data-ride="carousel" to start carousel on load of page, data-interval="time between slides in milliseconds".
+                Indicator li has attributes data-slide-to="slide number", data-target="selector for carousel container".
+                For controls add href="selector for carousel container", data-slide="prev" | "next".
+            </p>
+
+            
+            <div id="carousel-id" class="carousel slide" data-ride="carousel" data-interval="4000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-id" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../../images/pic-1.jpg" class="center-block" />
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Example headline.</h1>
+                                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../../images/pic-2.jpg" class="center-block" />
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Another example headline.</h1>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../../images/pic-3.jpg" class="center-block" />
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>One more for good measure.</h1>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            
+            <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>
