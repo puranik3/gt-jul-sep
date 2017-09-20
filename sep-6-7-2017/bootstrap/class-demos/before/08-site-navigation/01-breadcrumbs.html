@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Site Navigation | Breadcrumbs</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Site Navigation - Breadcrumbs</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Breadcrumbs serve as indication to user regarding placement of current viewed page in the site’s navigation hierarchy        
+            </p>
+            <p>
+                <small>.breadcrumb</small> (on list) and <small>.active</small> (active list item). Give anchor tags within list item to link the item to the page in navigation hierarchy.
+                <br />
+                <ul class="breadcrumb">
+                    <li><a href="../index.html">Bootstrap Demos</a></li>
+                    <li>Site Navigation</li>
+                    <li class="active">Breadcrumbs</li>
+                </ul>
+            </p>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="./01-breadcrumbs.html">1</a></li>
+                    <li ><a href="./02-pagination.html">2 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="./03-navbar.html">3</a></li>
+                    <li><a href="./02-pagination.html" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

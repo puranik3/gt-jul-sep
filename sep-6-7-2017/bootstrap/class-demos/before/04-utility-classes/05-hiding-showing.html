@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Utility classes | Hiding and Showing Elements</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            #hidden-para {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Utility Classes - Hiding and Showing Elements</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : show (only block-level), hidden, sr-only, invisible (box space maintained) for hiding                
+            </p>
+            <p class="show" id="hidden-para"> <!-- Force show using .show -->
+                <small>.show</small>
+                <br />
+                Qui ullamco fugiat velit dolore deserunt nisi. Do incididunt laborum incididunt Lorem. Ea eiusmod commodo culpa dolor mollit. Nisi commodo exercitation reprehenderit dolore eiusmod quis esse cupidatat irure veniam ad duis. Amet velit sunt sunt adipisicing in.
+            </p>
+            <p class="hidden"> <!-- Force hiding using .hidden -->
+                <small>.hidden</small>
+                <br />
+                Esse occaecat occaecat cupidatat officia consectetur magna duis aliquip esse. Et nostrud anim velit reprehenderit eiusmod tempor enim dolor minim. Et esse et officia culpa labore enim aliqua excepteur ipsum aliquip commodo aliqua minim. Et occaecat esse consequat Lorem quis nulla irure.
+            </p>
+            <p>
+                A paragraph after the .hidden para - Note that there is no space maintained above for the hidden element
+            </p>
+            <p class="invisible"> <!-- Force hiding using .invisible -->
+                <small>.invisible</small>
+                <br />
+                Esse occaecat occaecat cupidatat officia consectetur magna duis aliquip esse. Et nostrud anim velit reprehenderit eiusmod tempor enim dolor minim. Et esse et officia culpa labore enim aliqua excepteur ipsum aliquip commodo aliqua minim. Et occaecat esse consequat Lorem quis nulla irure.
+            </p>
+            <p>
+                A paragraph after the .invisible para - Note that space (above) is maintained for the invisible element
+            </p>
+
+            <!-- 
+                sr-only is similar to .hidden. The content is meant to be for screen readers only.
+                The element become visible when it gains focus (via tab key press)
+            -->
+            <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+            <p>
+                A paragraph after the .sr-only para - Note that there is no space maintained above for the .sr-only element. Hit the tab key and see the .sr-only para become visible when it gains focus on tabbing. This is due to the addition of the .sr-only-focusable class.
+            </p>
+        </div>
+    </body>
+</html>

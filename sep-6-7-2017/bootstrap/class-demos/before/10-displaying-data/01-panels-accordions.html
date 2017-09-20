@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Displaying Data | Panels and Accordions</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Displaying Data - Panels</h1>
+            <hr />
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : A panel is a component that looks like a window and has a heading and body.
+                <br />
+                <small>.panel</small> (base class) and <small>.panel-[theme]</small> for container
+                <br />
+                <small>.panel-heading</small> with optional <small>.panel-title</small> for heading
+                <br />
+                <small>.panel-body</small> for body
+            </p>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">What is jQuery?</h3>
+                </div>
+                <div class="panel-body">
+                    jQuery is a cross-browser compatible general-purpose JS library.
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">What is Bootstrap?</h3>
+                </div>
+                <div class="panel-body">
+                    Bootstrap is a responsive, mobile-first, front-end framework.
+                </div>
+            </div>
+
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : A panel can be made collapsible by wrapping the panel body within a <small>.collapse.panel-collapse</small> container. Add <small>.in</small> to make it visible by default. Make the heading/title a trigger for toggling the panel body by adding href/data-target (pointing to the collapsible container) and data-toggle="collapse".
+            </p>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title" data-target="#panel-1-body" data-toggle="collapse" style="cursor: pointer;">What is Bootstrap?</h3>
+                </div>
+                <div class="collapse panel-collapse in" id="panel-1-body">
+                    <div class="panel-body">
+                        Bootstrap is a responsive, mobile-first, front-end framework.
+                    </div>
+                </div>
+            </div>
+
+            <p class="demo-bite-sized">
+                <strong>Demo C</strong> : Convert a series of collapsible panels into an accordion by adding a container <small>.panel-group</small> around the panels. Add data-parent="selector for panel group" to each trigger.
+                <br />
+                <strong>Note</strong>: When one panel in a group opens, the one currently open, closes.
+            </p>
+
+            <div class="panel-group" id="framework-reference">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" data-target="#panel-a-body" data-toggle="collapse" data-parent="#framework-reference" style="cursor: pointer;">What is jQuery?</h3>
+                    </div>
+                    <div class="collapse panel-collapse in" id="panel-a-body">
+                        <div class="panel-body">
+                                jQuery is a cross-browser compatible general-purpose JS library.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" data-target="#panel-b-body" data-toggle="collapse" data-parent="#framework-reference" style="cursor: pointer;">What is Bootstrap?</h3>
+                    </div>
+                    <div class="collapse panel-collapse" id="panel-b-body">
+                        <div class="panel-body">
+                            Bootstrap is a responsive, mobile-first, front-end framework.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    // most JS components have a JS API to work with the compoennt in JS scripts
+                    // Example: automatically close the alert after 10 seconds using the alert() method and pass it the string 'close'
+                    setTimeout(
+                        function() {
+                            $( '#lottery-alert' ).alert( 'close' );
+                        },
+                        10000
+                    );
+
+                    // Bootstrap JS components fire events at various points which may be of interest to a developer - events are "namespaced" with 'bs' and and the component name (eg. 'alert')
+                    // Example: display a message in the console once the alert is closed
+                    $( '#lottery-alert' ).on( 'closed.bs.alert', function() {
+                        console.log( 'alert was closed' );
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

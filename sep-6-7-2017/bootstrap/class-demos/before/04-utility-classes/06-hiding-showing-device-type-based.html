@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Utility classes | Hiding and Showing Elements Based on Device Type</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            .row.colored [class^="col-"] {
+                color: white;
+                text-align: center;
+            }
+
+            .row.colored [class^="col-"]:nth-child(odd) {
+                background: olive;
+            }
+
+            .row.colored [class^="col-"]:nth-child(even) {
+                background: maroon;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Utility Classes - Hiding and Showing Elements based on device type</h1>
+            <hr />
+
+            <!-- 
+                Resize the browser to see hiding and showing taking place depending on device type
+            -->
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : hidden-[breakpoint] - To hide depending on device
+            </p>
+            <div class="row colored">
+                <div class="col-xs-3 hidden-xs"> <!-- Force show using .show -->
+                    <p class="text-center">
+                        Col 1 - 3 merged
+                        <br />
+                        <small>.hidden-xs</small>
+                    </p>
+                    Qui ullamco fugiat velit dolore deserunt nisi. Do incididunt laborum incididunt Lorem. Ea eiusmod commodo culpa dolor mollit. Nisi commodo exercitation reprehenderit dolore eiusmod quis esse cupidatat irure veniam ad duis. Amet velit sunt sunt adipisicing in.
+                </div>
+                <div class="col-xs-3 hidden-sm">
+                    <p class="text-center">
+                        Col 4 - 6 merged
+                        <br />
+                        <small>.hidden-sm</small>
+                    </p>
+                    Non laboris anim laborum est proident. Labore labore esse voluptate deserunt eiusmod ullamco ullamco sunt aliqua ad exercitation eu. Commodo ipsum anim aliqua minim.
+                </div>
+                <div class="col-xs-3 hidden-md">
+                    <p class="text-center">
+                        Col 7 - 9 merged
+                        <br />
+                        <small>.hidden-md</small>
+                    </p>
+                    Eu consequat incididunt ex adipisicing quis aute nulla aute. Nulla laborum officia elit amet sit deserunt sunt laboris dolor magna laboris. Non ad ut pariatur velit. Qui mollit commodo veniam dolor incididunt officia nostrud sunt minim.
+                </div>
+                <div class="col-xs-3 hidden-lg">
+                    <p class="text-center">
+                        Col 10 - 12 merged
+                        <br />
+                        <small>.hidden-lg</small>
+                    </p>
+                    Et proident occaecat est ea esse ut enim commodo incididunt do anim. Aute commodo sint ut pariatur excepteur qui sit aute veniam in laboris pariatur ipsum. Proident aute do velit nisi veniam mollit commodo veniam ullamco nisi ad dolor qui consequat. Nisi est ad sint eu ea labore ullamco est ex reprehenderit esse aliquip eu aute. Quis duis aliqua ipsum elit dolore deserunt. Lorem reprehenderit deserunt irure magna sint duis aliqua enim irure ut est culpa ea Lorem. Tempor amet adipisicing commodo cupidatat ipsum proident deserunt laborum proident.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

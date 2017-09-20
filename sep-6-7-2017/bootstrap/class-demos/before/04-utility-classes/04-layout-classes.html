@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Utility classes | Layout-related classes</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+        <style>
+            .img-small {
+                max-width: 25%;
+                max-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Utility Classes - Layout related classes</h1>
+            <hr />
+
+            <!-- 
+                Step 1: Floats can be achieved eaily using "pull-left" and "pull-right" classes
+                    1.1 Float the first image to the left by applying the class "pull-left"
+                    1.2 Float the second image to the right by applying the class "pull-right"
+                    1.3 To make sure floated elements do not affect the layout of content other than those within within their parent, make sure to apply class "clearfix" on the parent of the floated elements. This will contain the floated elements to within the parent container.
+            -->
+
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : pull-[direction] for floats and clearfix for clearing floats
+            </p>
+            <p> <!-- step 1.3 -->
+                <strong>Paragraph with floated elements</strong>
+                <br/>
+                <small>.pull-left</small> and <small>.pull-right</small> for floats, <small>.clearfix</small> on container element for clearing and containing floats
+                <br />
+                Reprehenderit amet quis dolore aliquip aliquip magna dolor aliqua sunt reprehenderit proident sit adipisicing. Et ipsum laborum qui magna. Consequat aute laborum laborum labore. Nulla do nisi exercitation dolor sint aliquip voluptate magna sit. Non do et est eu dolore dolor. Magna fugiat sunt eu adipisicing deserunt adipisicing est elit. Aute consectetur ea ea reprehenderit elit Lorem Lorem consectetur elit reprehenderit velit enim anim nostrud.
+                <img src="../../images/lion.png" class="img-small" /> <!-- step 1.1 -->
+                Minim elit in occaecat sint est reprehenderit. Laborum elit dolore elit duis aute cupidatat laborum ut adipisicing elit anim laborum officia. Eiusmod enim irure sint reprehenderit exercitation esse cillum non fugiat eiusmod. Deserunt elit anim aute ullamco veniam et amet mollit dolore elit pariatur non esse. In enim consequat ut magna mollit cupidatat minim nostrud aliquip.
+                <img src="../../images/bunny.jpg" class="img-small" /> <!-- step 1.2 -->
+                Cillum duis ullamco officia labore exercitation velit fugiat excepteur adipisicing eu ullamco commodo voluptate. Occaecat elit sunt voluptate commodo id reprehenderit officia ea incididunt do laboris. Qui voluptate est in aliqua. Tempor esse duis aliquip proident deserunt.
+                Commodo laborum dolore in proident enim. Do incididunt aute tempor minim adipisicing irure culpa non ullamco esse nulla. Excepteur voluptate et sit commodo deserunt.
+            </p>
+            <p>
+                <strong>Paragraph following the one with floats</strong>
+                <br/>
+                Laboris ipsum dolor irure labore adipisicing anim sit cillum sunt veniam sint sit sit. Proident ullamco cillum occaecat mollit aute nostrud aliqua incididunt eu mollit. Occaecat dolor nostrud duis fugiat. Ullamco consequat duis velit et eu eu reprehenderit nisi consectetur dolore cillum laborum dolore.
+                Proident ea est laboris quis dolore. Nisi non aliquip minim proident voluptate labore sit cillum sunt minim irure cillum irure et. Deserunt ipsum consequat nisi eiusmod. Amet cillum mollit veniam reprehenderit dolor Lorem qui anim. Commodo culpa ullamco fugiat consequat anim in eu sint reprehenderit velit veniam. Duis ex voluptate ea tempor officia dolore laborum dolore non enim officia elit sit do.
+            </p>
+
+            <!-- Step 2: Center an element using class "center-block". Add this class to the image below. -->
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : center-block to center an element                       
+            </p>
+            <p>
+                <small>.center-block</small>
+                <img src="../../images/bunny.jpg" /> <!-- step 2 -->
+            </p>
+        </div>
+    </body>
+</html>

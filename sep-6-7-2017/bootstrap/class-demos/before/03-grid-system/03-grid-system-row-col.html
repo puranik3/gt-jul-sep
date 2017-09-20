@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Grid System | Rows and columns</title>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../css/demo.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rows and columns</h1>
+            <hr/>
+
+            <!--
+                Step 1: Apply "col-md-2 col-sm-4 col-xs-6" on all six children of the row
+                Result: You will get
+                    a) 6-column layout on medium and large devices
+                    b) 3 column layout on small devices
+                    c) 2 column layout on extra-small devices
+            -->
+            <p class="demo-bite-sized">
+                <strong>Demo A</strong> : Multiple .col-* classes can be applied to get different layouts on different device types                
+            </p>
+            <div class="row text-justify">
+                <div class=""> <!-- step 1 -->
+                    <p class="text-center">
+                        <small>.col-md-2.col-sm-4.col-xs-6</small>
+                    </p>
+                    Pariatur id est ea aliqua ad occaecat anim incididunt. Voluptate consequat ipsum id laboris incididunt veniam proident aliquip reprehenderit qui commodo. Amet exercitation reprehenderit laborum mollit excepteur nostrud qui. Aliqua excepteur ad do consectetur est incididunt nisi. Incididunt proident nisi amet ut eiusmod deserunt tempor qui non enim.
+                </div>
+                <div class=""> <!-- step 1 -->
+                    <p class="text-center">
+                        <small>.col-md-2.col-sm-4.col-xs-6</small>
+                    </p>
+                    Do eu dolore nostrud deserunt ea. Ea labore culpa in sit in ad eiusmod magna. Tempor elit exercitation deserunt ex sunt consequat esse. Excepteur laborum laboris velit nostrud amet consequat amet duis cupidatat sint ullamco irure non. Labore non velit dolor qui proident quis.
+                </div>
+                <div class=""> <!-- step 1 -->
+                    <p class="text-center">
+                        <small>.col-md-2.col-sm-4.col-xs-6</small>
+                    </p>
+                    Pariatur id est ea aliqua ad occaecat anim incididunt. Voluptate consequat ipsum id laboris incididunt veniam proident aliquip reprehenderit qui commodo. Amet exercitation reprehenderit laborum mollit excepteur nostrud qui. Aliqua excepteur ad do consectetur est incididunt nisi. Incididunt proident nisi amet ut eiusmod deserunt tempor qui non enim.
+                </div>
+                <div class=""> <!-- step 1 -->
+                    <p class="text-center">
+                        <small>.col-md-2.col-sm-4.col-xs-6</small>
+                    </p>
+                    Do eu dolore nostrud deserunt ea. Ea labore culpa in sit in ad eiusmod magna. Tempor elit exercitation deserunt ex sunt consequat esse. Excepteur laborum laboris velit nostrud amet consequat amet duis cupidatat sint ullamco irure non. Labore non velit dolor qui proident quis.
+                </div>
+                <div class=""> <!-- step 1 -->
+                    <p class="text-center">
+                        <small>.col-md-2.col-sm-4.col-xs-6</small>
+                    </p>
+                    Pariatur id est ea aliqua ad occaecat anim incididunt. Voluptate consequat ipsum id laboris incididunt veniam proident aliquip reprehenderit qui commodo. Amet exercitation reprehenderit laborum mollit excepteur nostrud qui. Aliqua excepteur ad do consectetur est incididunt nisi. Incididunt proident nisi amet ut eiusmod deserunt tempor qui non enim.
+                </div>
+                <div class=""> <!-- step 1 -->
+                    <p class="text-center">
+                        <small>.col-md-2.col-sm-4.col-xs-6</small>
+                    </p>
+                    Do eu dolore nostrud deserunt ea. Ea labore culpa in sit in ad eiusmod magna. Tempor elit exercitation deserunt ex sunt consequat esse. Excepteur laborum laboris velit nostrud amet consequat amet duis cupidatat sint ullamco irure non. Labore non velit dolor qui proident quis.
+                </div>
+            </div>    
+    
+            <p class="demo-bite-sized">
+                <strong>Demo B</strong> : Columns will come below if they cannot fit in current row. Depending on the requirement, .clearfix and .visible-* class container may be required in such cases if column heights are different.                    
+            </p>
+            <div class="row text-justify">
+                <div class="col-xs-6 col-sm-3">
+                    <p class="text-center">
+                        <small>.col-xs-6.col-sm-3</small>
+                    </p>
+                    Pariatur id est ea aliqua ad occaecat anim incididunt. Voluptate consequat ipsum id laboris incididunt veniam proident aliquip reprehenderit qui commodo. Amet exercitation reprehenderit laborum mollit excepteur nostrud qui. Aliqua excepteur ad do consectetur est incididunt nisi. Incididunt proident nisi amet ut eiusmod deserunt tempor qui non enim. Velit dolor pariatur amet dolor id id laboris do.
+                    Eiusmod velit et adipisicing dolor. Enim exercitation sint reprehenderit aliquip officia exercitation anim. Nostrud id proident proident nisi aliquip occaecat esse quis incididunt enim. Veniam excepteur voluptate aliquip et duis Lorem excepteur et sint amet commodo et ad qui. Dolor enim ea commodo dolore ullamco excepteur ipsum adipisicing non pariatur eiusmod et ad. Ea elit do est cupidatat aute fugiat ex do eu consequat proident dolor.
+                    Ad sint tempor anim aliquip sit non Lorem ea. Excepteur excepteur dolore quis aliqua incididunt elit minim do dolore nisi velit. Ut officia pariatur et sit incididunt duis fugiat labore elit. Laborum anim veniam duis aliquip. Deserunt ipsum culpa adipisicing aliquip officia excepteur irure adipisicing adipisicing officia aliquip aute mollit. Excepteur id veniam cupidatat ad eiusmod nulla officia aliquip.
+                    Laboris deserunt ad mollit culpa aute magna veniam enim nulla sit incididunt ullamco. Id anim adipisicing tempor dolore est officia. Magna proident nulla dolore qui commodo aliquip esse. Proident fugiat amet excepteur commodo exercitation.
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <p class="text-center">
+                        <small>.col-xs-6.col-sm-3</small>
+                    </p>
+                    Do eu dolore nostrud deserunt ea. Ea labore culpa in sit in ad eiusmod magna. Tempor elit exercitation deserunt ex sunt consequat esse. Excepteur laborum laboris velit nostrud amet consequat amet duis cupidatat sint ullamco irure non. Labore non velit dolor qui proident quis.
+                    Aute consequat ex cillum do. Culpa ea exercitation nostrud officia. Et ipsum sint exercitation duis. Dolore irure occaecat cillum minim id dolor laborum Lorem reprehenderit. 
+                </div>
+
+                <!-- Adding clearfix clears the succeeding columns from appearing next to preceding columns -->
+                <!-- However, to get 3 column layout on small devies and above, we now need to set the clearfix element to invisible on small screens and above -->
+                <div class="clearfix visible-xs-block"></div>
+
+                <div class="col-xs-6 col-sm-3">
+                    <p class="text-center">
+                        <small>.col-xs-6.col-sm-3</small>
+                    </p>
+                    Ex veniam adipisicing voluptate reprehenderit mollit eu do. Proident dolor amet ullamco 
+                    reprehenderit sunt mollit irure eiusmod voluptate nostrud.
+                    Laboris dolor aliqua eu magna commodo magna duis nisi. Minim id aute amet anim. Ullamco esse occaecat eiusmod culpa sint pariatur in ea elit.
+                    Ut consectetur sit non consequat elit nisi. Qui sunt est excepteur id nisi et incididunt sint labore do in. Nulla ipsum dolor ea exercitation magna. Anim ut nisi sint ullamco mollit ut culpa irure. Non ad laboris incididunt ullamco in pariatur deserunt occaecat Lorem elit eu sint pariatur mollit. Exercitation duis pariatur mollit ullamco id consequat esse proident enim.
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <p class="text-center">
+                        <small>.col-xs-6.col-sm-3</small>
+                    </p>
+                    Quis excepteur elit excepteur veniam cupidatat occaecat reprehenderit minim elit est cupidatat do. Incididunt exercitation quis adipisicing sit. Cillum fugiat sit fugiat sint magna adipisicing incididunt adipisicing.
+                    Dolor adipisicing consequat tempor veniam irure consectetur ut est laboris reprehenderit excepteur. Nostrud consequat nostrud voluptate exercitation cupidatat dolor sint nisi labore in Lorem officia irure aliqua. Ad id nisi exercitation proident sunt proident ad sit irure labore reprehenderit cillum sit. Pariatur elit dolore eiusmod anim sit cillum ad consequat dolore et laborum do occaecat. Eu dolore culpa sint velit sint. Id voluptate esse magna fugiat sit culpa eu amet culpa. Sit id sunt ipsum eiusmod magna.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
