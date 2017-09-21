@@ -1,0 +1,39 @@
+<div class="container">  
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+       <div class="row">
+         <div class="col-xs-12">
+            <label class="control-label">Filter by</label>
+            <input type="text" class="form-control" />
+          </div>
+       </div>
+       <div class="row">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Image Url</th>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Code</th>
+                <th>Price</th>
+                <th>Star Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products">
+                <td></td>
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.starRating}}</td>
+              </tr>
+            </tbody>
+          </table>
+       </div>
+    </div>
+  </div>
+</div>
