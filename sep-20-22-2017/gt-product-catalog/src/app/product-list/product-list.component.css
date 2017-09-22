@@ -1,3 +1,7 @@
 :host > .container {
     margin-top: 20px;
 }
+
+.product-image {
+    width: 50px;
+}

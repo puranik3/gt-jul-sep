@@ -1,12 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
   pageTitle : string = 'Product List';
+  imageWidth: number = Math.random() * 100; // random width for image between 0 - 100
+  imageDisplay: boolean = true;
+  _searchKey: string = '';
+  
+  constructor() {
+    console.log( '[constructor called] ProductListCOmponent object has been created by Angular framework at time ', (new Date).getTime() );
+  }
+
+  // network calls etc. to fetch data for the view
+  ngOnInit() {
+    console.log( '[ngOnInit() called] ProductListCOmponent object has been initialized Angular framework at time ', (new Date).getTime() );
+  }
+
+  get searchKey() : string {
+      return this._searchKey;
+  }
+
+  set searchKey( value ) {
+    this._searchKey = value;
+    var that = this;
+    this.filteredProducts = this.products.filter(function( product ) {
+        return product.productName.toUpperCase().indexOf( that._searchKey.toUpperCase() ) !== -1;
+    });
+  }
+
+  startDate: Date = new Date();
+
   products = [
       {
           "productId": 1,
@@ -59,4 +86,24 @@ export class ProductListComponent {
           "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
       }
   ];
+  filteredProducts: any[] = this.products;
+
+  toggleImage() : void {
+      this.imageDisplay = !this.imageDisplay;
+  }
+
+  transformProductId(productId) : string {
+      return 'PID-' + productId;
+  }
+
+  removeProduct( product ) {
+      console.log( 'Product is ', product );
+      var indexOfSelectedProduct = this.products.indexOf(product);
+      this.products.splice( indexOfSelectedProduct, 1 );
+  }
+
+  // creates and returns a new array with only products whose name matches the search key
+  filterProducts() {
+
+  }
 }

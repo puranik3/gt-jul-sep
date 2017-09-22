@@ -7,14 +7,29 @@
        <div class="row">
          <div class="col-xs-12">
             <label class="control-label">Filter by</label>
-            <input type="text" class="form-control" />
+            <!-- 2-way data-binding for search input -->
+            <input type="text" class="form-control" [(ngModel)]="searchKey" /> <!-- explore how to do search functionality by using the ngModelChanges directive -->
+            You are searching by: <span style="color: crimson;">{{searchKey}}</span>
+
+            <!--
+            <input type="date" class="form-control" [(ngModel)]="startDate" />
+            You are searching by: <span style="color: crimson;">{{startDate}}</span>
+            -->
+
+            <br/>
+            <button class="btn btn-danger" (click)="searchKey = ''">Reset search</button>
+            <br/>
           </div>
        </div>
+       <!-- there is also an *ngSwitch you can use for actions on opposite conditions (if-else) -->
        <div class="row">
-          <table class="table">
+          <div class="alert alert-primary" *ngIf="products && products.length === 0">
+            No products found
+          </div>
+          <table class="table" *ngIf="products && products.length !== 0">
             <thead>
               <tr>
-                <th>Image Url</th>
+                <th>Image <input type="button" class="btn btn-primary" [value]="imageDisplay === true ? 'Hide image' : 'Show image'" (click)="toggleImage()" /></th>
                 <th>Product Id</th>
                 <th>Product Name</th>
                 <th>Product Code</th>
@@ -23,13 +38,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let product of products">
-                <td></td>
-                <td>{{product.productId}}</td>
+              <tr *ngFor="let product of filteredProducts" (dblclick)="removeProduct(product)">
+                <!-- you can also use [hidden]="imageDisplay" instead of *ngIf -->
+                <td><img [src]="product.imageUrl" [style.width.px]="imageWidth" *ngIf="imageDisplay" /></td> <!-- Can also be done by adding class="product-image"  -->
+                <td>{{transformProductId(product.productId)}}</td>
                 <td>{{product.productName}}</td>
-                <td>{{product.productCode}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.starRating}}</td>
+                <td>{{product.productCode | lowercase | replaceCharacter:'-':':'}}</td>
+                <td>{{product.price | currency:'INR':true:'1.2-2'}}</td> <!-- number, date, percentage, json -->
+                <td>
+                  <app-rating-stars [rating]="product.starRating"></app-rating-stars>
+                </td>
               </tr>
             </tbody>
           </table>
