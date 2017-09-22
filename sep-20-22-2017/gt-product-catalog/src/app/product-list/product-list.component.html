@@ -42,11 +42,14 @@
                 <!-- you can also use [hidden]="imageDisplay" instead of *ngIf -->
                 <td><img [src]="product.imageUrl" [style.width.px]="imageWidth" *ngIf="imageDisplay" /></td> <!-- Can also be done by adding class="product-image"  -->
                 <td>{{transformProductId(product.productId)}}</td>
-                <td>{{product.productName}}</td>
+                <td>
+                  <a [routerLink]="[product.productId]">{{product.productName}}</a>
+                </td>
                 <td>{{product.productCode | lowercase | replaceCharacter:'-':':'}}</td>
                 <td>{{product.price | currency:'INR':true:'1.2-2'}}</td> <!-- number, date, percentage, json -->
                 <td>
-                  <app-rating-stars [rating]="product.starRating"></app-rating-stars>
+                  <app-rating-stars [rating]="product.starRating" (ratingClick)="onRatingClick($event)"></app-rating-stars>
+                  <button (click)="incrProductRating(product)">Increment rating</button>
                 </td>
               </tr>
             </tbody>

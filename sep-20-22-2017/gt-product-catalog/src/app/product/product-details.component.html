@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <img [src]="product.imageUrl" />
+    </div>
+    <div class="col-xs-6">
+      <div>
+        Product Id: {{product.productId}}
+      </div>
+      <div>
+        Product name: {{product.productName}}
+      </div>
+      <div>
+        Product Description: {{product.description}}
+      </div>
+      <div>
+        Rating: <app-rating-stars [rating]="product.starRating"></app-rating-stars>
+      </div>
+    </div>
+  </div>
+</div>
