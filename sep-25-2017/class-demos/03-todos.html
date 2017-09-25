@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Todo List</title>
+        <link rel="stylesheet" href="../external/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h2>Todo list</h2>
+        <hr/>
+        
+        <ul data-bind="foreach: todos">
+            <li>
+                <span data-bind="text: title"></span>
+                <span class="label" data-bind="text: priority, css: { 'label-danger': priority === 'Urgent', 'label-success': priority !== 'Urgent' }"></span>
+            </li>
+        </ul>
+
+        <script src="../external/jquery-3.2.1.min.js"></script>
+        <script src="../external/jquery.tmpl.min.js"></script>
+        <script src="../external/knockout-3.4.2.js"></script>
+    
+        <script>
+            var todos = [
+                { title: 'Buy fruits', priority: 'Not urgent' },
+                { title: 'Repair pipe', priority: 'Urgent' },
+                { title: 'Book train tickets', priority: 'Urgent' }
+            ];
+
+            function ViewModel() {
+                this.todos = ko.observableArray( todos );
+            };
+
+            $(document).ready(function() {
+                var viewModel = new ViewModel();
+                ko.applyBindings( viewModel );
+            });
+        </script>
+    </body>
+</html>

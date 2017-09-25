@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Observable arrays</title>
+        <link rel="stylesheet" href="../external/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h2>List of Holidays in 2017</h2>
+        <hr/>
+        
+        <input type="date" data-bind="value: inputDate" />
+        <input type="text" data-bind="value: inputHoliday" />
+
+        <button data-bind="click: addHoliday">Add holiday</button>
+
+        <table class="table table-bordered">
+            <thead>
+                <th>Date</th>
+                <th>Holiday</th>
+            </thead>
+            <tbody data-bind="foreach: holidays">
+                <tr>
+                    <td data-bind="text: date"></td>
+                    <td data-bind="text: holiday, style: { color: optional ? color : 'black' }"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="../external/jquery-3.2.1.min.js"></script>
+        <script src="../external/jquery.tmpl.min.js"></script>
+        <script src="../external/knockout-3.4.2.js"></script>
+    
+        <script>
+            var holidays = [
+                { date: new Date(2017, 1, 14), holiday: 'Pongal', color: 'red', optional: true },
+                { date: new Date(2017, 1, 26), holiday: 'Republic Day', color: 'blue', optional: false },
+                { date: new Date(2017, 3, 3), holiday: 'Holi', color: 'green', optional: true }
+            ];
+
+            function ViewModel() {
+                this.holidays = ko.observableArray( holidays );
+                this.inputDate = ko.observable();
+                this.inputHoliday = ko.observable();
+                this.addHoliday = function() {
+                    this.holidays.push({
+                        date: new Date( this.inputDate() ),
+                        holiday: this.inputHoliday()
+                    });
+                };
+            };
+
+            $(document).ready(function() {
+                var viewModel = new ViewModel();
+                ko.applyBindings( viewModel );
+            });
+        </script>
+    </body>
+</html>
