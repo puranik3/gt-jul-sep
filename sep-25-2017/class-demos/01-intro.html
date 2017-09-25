@@ -12,7 +12,7 @@
 
         <input type="checkbox" name="isNameVisibleCheckbox" data-bind="checked: isNameVisible" />
 
-        <span data-bind="text: firstname, visible: isNameVisible"></span>
+        <span data-bind="text: fullname, visible: isNameVisible"></span>
 
         <script src="../external/jquery-3.2.1.min.js"></script>
         <script src="../external/knockout-3.4.2.js"></script>
@@ -22,9 +22,14 @@
             $(document).ready(function() {
                 // like Angular's component.ts file (ViewModel/Controller)
                 function IntroViewModel() {
+                    //var that = this;
                     this.firstname = ko.observable('John');
                     this.lastname = ko.observable('Doe');
-                    this.isNameVisible = ko.observable( true )
+                    this.isNameVisible = ko.observable( true );
+                    this.fullname = ko.computed(function() {
+                        // console.log( this ); // will be the viewModel since we have passed 'this' as second argument to ko.computed()
+                        return this.firstname() + ' ' + this.lastname();
+                    }, this);
                 }
 
                 var viewModel = new IntroViewModel();
