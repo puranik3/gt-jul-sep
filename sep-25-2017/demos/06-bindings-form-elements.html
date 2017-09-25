@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>
+            Your country:
+            <select data-bind="options: availableCountries,
+                                optionsText: 'countryName',
+                                value: selectedCountry,
+                                optionsCaption: 'Choose...', selectedOptions: selectedCountries"></select>
+        </p>
+            
+        <div data-bind="visible: selectedCountry"> <!-- Appears when you select something -->
+            You have chosen a country with population
+            <span data-bind="text: selectedCountry() ? selectedCountry().countryPopulation : 'unknown'"></span>.
+        </div>
+        
+        <div data-bind="click: logCountries">Click</div>
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+        
+
+        <script type="text/javascript">
+            // Constructor for an object with two properties
+            var Country = function(name, population) {
+                this.countryName = name;
+                this.countryPopulation = population;
+            };
+            
+            var viewModel = {
+                availableCountries : ko.observableArray([
+                    new Country("UK", 65000000),
+                    new Country("USA", 320000000),
+                    new Country("Sweden", 29000000)
+                ]),
+                selectedCountry : ko.observable(), // Nothing selected by default
+                selectedCountries : ko.observableArray(['Germany']),
+                logCountries: function() {
+                    console.log( this.selectedCountry());
+                }
+            };
+
+            ko.applyBindings(viewModel);
+        </script>
+    </body>
+</html>

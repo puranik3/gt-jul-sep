@@ -27,16 +27,16 @@ filteredProducts: any[] = this.products;
   ngOnInit() {
     console.log( '[ngOnInit() called] ProductListCOmponent object has been initialized Angular framework at time ', (new Date).getTime() );
 
-    /*this._productService.getProducts().subscribe(
+    this._productService.getProducts().subscribe(
         response => {
             this.products = response;
             this.filteredProducts = this.products;
         },
         error => console.log( error ),
         () => console.log( 'completed' )
-    );*/
+    );
 
-    this.products = this._productService.getProducts();
+    //this.products = this._productService.getProducts();
     //console.log( this.products );
     this.filteredProducts = this.products;
   }

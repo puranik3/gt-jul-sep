@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="name" data-bind="value: name" />
+        <button data-bind="click: addItem">Add</button>
+        <button data-bind="click: removeItem">Remove</button>
+
+        <ul data-bind="template: { name: 'listTpl', foreach: list }"></ul>
+
+        <script id="listTpl" type="text/html">
+            <li data-bind="text: name, attr: {title: name}, style: { color: credits > 0 ? color : 'red'}"></li>
+        </script>
+        
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+        
+
+        <script>
+            /// <reference path="../node_modules/@types/knockout/index.d.ts" />
+
+            var data = [
+                {
+                    name: 'Bob',
+                    color: 'yellow',
+                    credits: 100
+                },
+                {
+                    name: 'Joe',
+                    color: 'green',
+                    credits: -100
+                },
+                {
+                    name: 'John',
+                    color: 'blue',
+                    credits: 50
+                }
+            ];
+
+            function ObservableArraysViewModel() {
+                this.name = ko.observable( null );
+                this.list = ko.observableArray( data );
+                this.addItem = function() {
+                    this.list.push({
+                        name: this.name()
+                    });
+                },
+                this.removeItem = function() {
+                    this.list.pop();
+                }
+            }
+
+            $(document).ready(function() {
+                var viewModel = new ObservableArraysViewModel();
+                ko.applyBindings( viewModel );
+            });
+        </script>
+    </body>
+</html>

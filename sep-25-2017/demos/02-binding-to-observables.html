@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        Name: <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+
+        <input type="checkbox" data-bind="checked: isNameVisible" />
+
+        <span data-bind="text: name, visible: isNameVisible"></span>
+        
+        <button data-bind="click: changeName">Change name</button>
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+        
+
+        <script>
+            /// <reference path="../node_modules/@types/knockout/index.d.ts" />
+
+            function IntroViewModel() {
+                this.name = ko.observable( 'bob' ),
+                this.isNameVisible = ko.observable( true ),
+
+                this.changeName = function() {
+                    this.name( 'steve' );
+                }
+            };
+
+            $(document).ready(function() {
+                var viewModel = new IntroViewModel();
+                ko.applyBindings( viewModel );
+            });
+        </script>
+    </body>
+</html>

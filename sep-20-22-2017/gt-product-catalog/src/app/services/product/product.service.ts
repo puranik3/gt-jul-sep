@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ProductService {
   //_http: Http;
-  private url = 'products.json';
+  private url = 'http:4200/api/products/products.json';
 
   products = [
     {
@@ -66,13 +66,13 @@ export class ProductService {
       //this._http = http;
   }
 
-  /*getProducts() : Observable<any> {
+  getProducts() : Observable<any> {
     return this._http.get( this.url ).map(response => response.json());
-  }*/
-
-  getProducts() {
-    return this.products;
   }
+
+  /*getProducts() {
+    return this.products;
+  }*/
 
   getProduct( productId ) {
     return this.products.find(function( product ) {

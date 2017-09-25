@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        Todo: <input type="text" name="todo" data-bind="value: todoNew" />
+        
+        <h2>Todo List</h2>
+        <hr/>
+        <ul data-bind="foreach: todos">
+            <li class="todo" data-bind="click: $parent.selectTodo">
+                <span data-bind="text: title"></span>
+                <div style="float: right">
+                    <a href="#" clas="todo-edit">Edit</a>
+                    <a href="#" class="todo-delete">Delete</a>
+                </div>
+            </li>
+        </ul>
+
+        <button data-bind="click: addTodo">+ Add Todo</button>
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../external/jquery.tmpl.min.js"></script>
+        <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+
+        <script>
+            /// <reference path="../node_modules/@types/knockout/index.d.ts" />
+
+            var todos = [
+                { id: 1, title: 'Clean room' },
+                { id: 2, title: 'Plumbing work' },
+                { id: 3, title: 'Book movie tickets for Wednesday' },
+            ];
+
+            counter = 3;
+
+            $(document).ready(function() {
+                function TodoViewModel() {
+                    var that = this;
+
+                    this.todos = ko.observableArray( todos );
+                    this.todoNew = ko.observable();
+                    this.selectedTodo = ko.observable(  );
+
+                    this.addTodo = function() {
+                        console.log( this.todoNew() );
+                        this.todos.push({
+                            id: ++counter,
+                            title: this.todoNew()
+                        });
+                        this.todoNew('');
+                    };
+
+                    this.selectTodo = function() {
+                        console.log( 'this = ', this );
+                        console.log( ko.dataFor( this ) );
+                        that.selectedTodo(this);
+                        console.log( 'this.selectedTodo() = ', that.selectedTodo() );
+                    };
+
+                    $(document).on( 'click', '.todo-delete', function() {
+                        var itemToRemove = ko.dataFor(this);
+                        that.todos.remove( itemToRemove );
+                    });
+                };
+
+            
+                var viewModel = new TodoViewModel();
+                
+                ko.applyBindings( viewModel );
+
+                console.log( 'init complete' );
+            });
+        </script>
+    </body>
+</html>

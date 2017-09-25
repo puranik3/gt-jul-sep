@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        Name: <input type="text" data-bind="value: name" />
+        <span data-bind="text: name"></span>
+        <button data-bind="click: changeName">Change name</button>
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+
+        <script>
+            function IntroViewModel() {
+                this.name = 'bob',
+                this.changeName = function() {
+                    this.name = 'steve';
+                }
+            };
+
+            $(document).ready(function() {
+                var viewModel = new IntroViewModel();
+                ko.applyBindings( viewModel );
+            });
+        </script>
+    </body>
+</html>

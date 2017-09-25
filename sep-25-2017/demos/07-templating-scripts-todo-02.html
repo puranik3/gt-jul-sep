@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        Todo: <input type="text" name="todo" data-bind="value: todoNew" />
+        
+        <h2>Todo List</h2>
+        <hr/>
+        <ul data-bind="template: { name: 'todoTpl', foreach: todos }"></ul>
+
+        <script id="todoTpl" type="text/html">
+            <li class="todo">
+                <span>${title}</span>
+                <div style="float: right">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </div>
+            </li>
+        </script>
+
+        <button data-bind="click: addTodo">+ Add Todo</button>
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../external/jquery.tmpl.min.js"></script>
+        <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+
+        <script>
+            /// <reference path="../node_modules/@types/knockout/index.d.ts" />
+
+            var todos = [
+                { id: 1, title: 'Clean room' },
+                { id: 2, title: 'Plumbing work' },
+                { id: 3, title: 'Book movie tickets for Wednesday' },
+            ];
+
+            counter = 3;
+            
+            function TodoViewModel() {
+                this.todos = ko.observableArray( todos );
+                this.todoNew = ko.observable();
+
+                this.addTodo = function() {
+                    console.log( this.todoNew() );
+                    this.todos.push({
+                        id: ++counter,
+                        title: this.todoNew()
+                    });
+                    this.todoNew('');
+                };
+            };
+
+            $(document).ready(function() {
+                var viewModel = new TodoViewModel();
+                ko.applyBindings( viewModel );
+                console.log( 'init complete' );
+            });
+        </script>
+    </body>
+</html>

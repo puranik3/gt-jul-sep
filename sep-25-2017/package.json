@@ -1,0 +1,20 @@
+{
+  "name": "sep-25-2017",
+  "version": "1.0.0",
+  "description": "- JS MVVM framework     - MVVM         - Model (no presentation concerns)         - View         - ViewModel - code representing data + operations on a UI (has partition concerns)     - Not a replacement for jQuery     - Can be used in non-SPA apps too",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "jquery.tmpl": "0.0.2",
+    "knockout": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/knockout": "^3.4.45"
+  }
+}
